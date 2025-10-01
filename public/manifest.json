@@ -1,12 +1,12 @@
 {
   "name": "My Next.js PWA",
   "short_name": "NextPWA",
+  "start_url": "/",
+  "display": "standalone",
   "theme_color": "#000000",
   "background_color": "#ffffff",
-  "display": "standalone",
-  "scope": "/",
-  "start_url": "/",
   "orientation": "portrait",
+  "scope": "/",
   "icons": [
     {
       "src": "/icons/icon-192x192.png",

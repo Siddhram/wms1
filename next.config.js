@@ -3,16 +3,13 @@ const withPWA = require("next-pwa")({
   dest: "public",
   register: true,
   skipWaiting: true,
-  disable: false, // 🔹 Always enable PWA
+  disable: false, // Always enable PWA
 });
 
 const nextConfig = {
-  eslint: {
-    ignoreDuringBuilds: true,
-  },
+  eslint: { ignoreDuringBuilds: true },
   images: { unoptimized: true },
-  webpack: (config, { isServer }) => {
-    // Always avoid bundling undici
+  webpack: (config) => {
     config.resolve.alias["undici"] = false;
     return config;
   },
