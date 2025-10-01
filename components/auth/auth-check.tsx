@@ -79,6 +79,9 @@ export default function AuthCheck({ children }: { children: React.ReactNode }) {
     // Don't do anything while loading
     if (loading) return;
 
+    // Handle null pathname
+    if (!pathname) return;
+
     // Check if the path is public
     if (publicPaths.has(pathname) || pathname.startsWith('/_next')) {
       return;
